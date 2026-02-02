@@ -11,7 +11,7 @@ import com.educandoweb.course.repositories.UserRepository;
 
 @Service
 public class UserService {
-
+	
 	@Autowired
 	private UserRepository userRepository;
 	
@@ -30,5 +30,18 @@ public class UserService {
 	
 	public void delete(Long id) {
 		userRepository.deleteById(id);
+	}
+	
+	public User update(Long id, User obj) {
+		User entity = userRepository.getReferenceById(id);
+		updateData(entity, obj);
+		return userRepository.save(entity);
+	}
+	
+	private void updateData(User entity, User obj) {
+		entity.setName(obj.getName());
+		entity.setEmail(obj.getEmail());
+		entity.setPhone(obj.getPhone());
+		
 	}
 }
