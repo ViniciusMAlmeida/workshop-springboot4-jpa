@@ -8,7 +8,7 @@ Focando em boas práticas como separação de camadas, API REST, persistência c
 
 ## 📌 Tecnologias utilizadas
 
-* ☕ **Java 21** (ou compatível)
+* ☕ **Java 25** (ou compatível)
 * 🌱 **Spring Boot 4**
 * 🌐 **Spring Web / Spring MVC**
 * 🗄️ **Spring Data JPA (Hibernate)**
